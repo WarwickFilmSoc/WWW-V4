@@ -1,0 +1,1 @@
+<p>Footer Placeholder</p>

@@ -1,0 +1,7 @@
+{% extends app.config['TEMPLATE'] + "base.html" %}
+
+{% block content %}
+    {% if title %}
+        <h1>{{ title }}</h1>
+    {% endif %}
+{% endblock content %}

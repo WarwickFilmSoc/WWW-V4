@@ -1,0 +1,16 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - Warwick Student Cinema</title>
+    {% else %}
+    <title>Welcome to Warwick Student Cinema</title>
+    {% endif %}
+  </head>
+  <body>
+  {% include app.config['TEMPLATE_ROOT'] + '/header.html' %}
+    {% block content %}
+        <h3>Whoops! Looks like this page isn't complete yet!</h3>
+    {% endblock %}
+  {% include app.config['TEMPLATE_ROOT'] + '/footer.html' %}
+  </body>
+</html>
