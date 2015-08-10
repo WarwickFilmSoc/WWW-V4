@@ -7,5 +7,6 @@ def get_current_commit_date():
     return check_output(['git', 'log', '-1', '--pretty=format:%cd'])
     
 def update():
-    call(['git', '-C /usr/share/www-v4/ pull -f'])
-    call(['git', 'reset --hard origin/master'])
+    pull = check_output(['git', 'pull', '-f'])
+    call(['git', 'reset', '--hard', 'origin/master'])
+    return pull
