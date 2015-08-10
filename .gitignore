@@ -1,6 +1,13 @@
+# Exclude compiled files
 *.pyc
 *.pyo
-app.db
-search.db
-flask
 
+# The following excludes everything from the virtual environment except the filmsoc module
+flask/*
+!flask/Lib
+
+flask/Lib/*
+!flask/Lib/site-packages
+
+flask/Lib/site-packages/*
+!flask/Lib/site-packages/filmsoc
