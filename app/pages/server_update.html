@@ -1,0 +1,12 @@
+{% extends app.config['TEMPLATE_ROOT'] + "/base.html" %}
+
+{% block content %}
+    {% if title %}
+        <h1>{{ title }}</h1>
+    {% endif %}
+    
+    {{ filmsoc.git.get_current_commit() }}
+    ({{ filmsoc.git.get_current_commit_date() }})
+    <br/>
+    {{ filmsoc.git.update() }}
+{% endblock content %}
