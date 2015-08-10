@@ -7,10 +7,10 @@
     {% endif %}
   </head>
   <body>
-  {% include app.config['TEMPLATE_ROOT'] + '/header.html' %}
+  {% include app.config['TEMPLATE_ROOT'] + 'header.html' %}
     {% block content %}
         <h3>Whoops! Looks like this page isn't complete yet!</h3>
     {% endblock %}
-  {% include app.config['TEMPLATE_ROOT'] + '/footer.html' %}
+  {% include app.config['TEMPLATE_ROOT'] + 'footer.html' %}
   </body>
 </html>
