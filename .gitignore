@@ -2,12 +2,4 @@
 *.pyc
 *.pyo
 
-# The following excludes everything from the virtual environment except the filmsoc module
-flask/*
-!flask/Lib
-
-flask/Lib/*
-!flask/Lib/site-packages
-
-flask/Lib/site-packages/*
-!flask/Lib/site-packages/filmsoc
+flask

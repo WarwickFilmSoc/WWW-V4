@@ -1,5 +1,5 @@
 from subprocess import call
-
+    
 def get_current_commit():
     return call(['git', '--git-dir="/usr/share/www-v4/.git" log -1 --pretty="oneline" --abbrev-commit'])
     
