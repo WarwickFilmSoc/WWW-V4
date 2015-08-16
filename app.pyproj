@@ -47,8 +47,10 @@
     <Folder Include="filmsoc\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\pages\contact.html" />
     <Content Include="app\pages\index.html" />
     <Content Include="app\pages\about.html" />
+    <Content Include="app\pages\login.html" />
     <Content Include="app\pages\page_base.html" />
     <Content Include="app\pages\server_update.html" />
     <Content Include="app\templates\default\base.html" />

@@ -1,7 +1,8 @@
 {% extends config['TEMPLATE_ROOT'] + "base.html" %}
 {% set page = {
         'path': path,
-        'title' : 'Server Update'
+        'title' : 'Server Update',
+        'update_result' : filmsoc.git.update()
         }
 %}
 
@@ -12,10 +13,19 @@
         <h1>{{ page['title'] }}</h1>
     {% endif %}
     
+<p> Current Version: 
     {{ filmsoc.git.get_current_commit() }}
     ({{ filmsoc.git.get_current_commit_date() }})
-    <br/>
+</p>
+
+{% if page['update_result'] != 'Already up-to-date.' %}
     <pre>
-    {{ filmsoc.git.update() }}
+        {{ page['update_result'] }}
     </pre>
+    <p>Now at: 
+        {{ filmsoc.git.get_current_commit() }}
+        ({{ filmsoc.git.get_current_commit_date() }})
+    </p>
+{% endif %}
+
 {% endblock content %}
