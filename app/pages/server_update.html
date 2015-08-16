@@ -18,7 +18,7 @@
     ({{ filmsoc.git.get_current_commit_date() }})
 </p>
 
-{% if page['update_result'] != 'Already up-to-date.' %}
+{% if 'Already up-to-date.' not in page['update_result'] %}
     <pre>
         {{ page['update_result'] }}
     </pre>
