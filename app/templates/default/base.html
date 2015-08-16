@@ -5,12 +5,25 @@
     {% else %}
     <title>Welcome to Warwick Student Cinema</title>
     {% endif %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
   </head>
   <body>
   {% include config['TEMPLATE_ROOT'] + 'header.html' %}
-    {% block content %}
-        <h3>Whoops! Looks like this page isn't complete yet!</h3>
-    {% endblock %}
-  {% include config['TEMPLATE_ROOT'] + 'footer.html' %}
-  </body>
+      <div class="container body-content">
+          {% block content %}
+            <h3>Whoops! Looks like this page isn't complete yet!</h3>
+          {% endblock %}
+          <hr />
+          {% include config['TEMPLATE_ROOT'] + 'footer.html' %}
+      </div>
+      
+      <script src="/static/scripts/jquery-1.10.2.js"></script>
+      <script src="/static/scripts/bootstrap.js"></script>
+      <script src="/static/scripts/respond.js"></script>
+      {% block scripts %}{% endblock %}
+</body>
 </html>

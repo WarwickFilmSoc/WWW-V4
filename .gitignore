@@ -4,3 +4,7 @@
 
 # Exclude virtual environment
 flask
+
+# Exclude VS debugging files
+bin
+obj
