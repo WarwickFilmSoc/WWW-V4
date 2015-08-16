@@ -1,1 +1,5 @@
-Flask<1
+Flask==0.10.1
+Flask-WTF==0.12
+Flask-SQLAlchemy==2.0
+Jinja2==2.8
+WTForms==2.0.2

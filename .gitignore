@@ -5,6 +5,8 @@
 # Exclude virtual environment
 flask
 
-# Exclude VS debugging files
+# Exclude VS files
 bin
 obj
+
+*.suo
