@@ -12,6 +12,7 @@ class Config(object):
         'surname': (True, 'surname'),
         'username': (True, 'username'),
         'photo_id': (False, 'photo_id'),
+        'mail': (True, 'mail'),
         'web_id': (True, 'web_id')
         }
 
