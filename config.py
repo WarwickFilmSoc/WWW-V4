@@ -5,6 +5,9 @@ class Config(object):
     DEBUG = True
     DEVELOPMENT = True
 
+    # Secret key
+    SECRET_KEY = os.urandom(24)
+
     # Flask-SSO Configuration
     SSO_ATTRIBUTE_MAP = {
         'pid': (True, 'pid'),
@@ -22,3 +25,4 @@ class Config(object):
 class ProductionConfig(Config):
     DEVELOPMENT = False
     DEBUG = False
+    SECRET_KEY = open('/opt/secretkey').read()
