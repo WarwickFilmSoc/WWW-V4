@@ -1,4 +1,4 @@
-{% if session['logged_in'] %}
+{% if not session['logged_in'] %}
 <li><a href="/login">Login</a></li>
 {% else %}
 <li><a href="/logout">Logout</a></li>
