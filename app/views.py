@@ -10,6 +10,7 @@ from app import app
 
 app.jinja_env.globals['filmsoc'] = filmsoc
 app.jinja_env.globals['app'] = app
+app.jinja_env.globals['session'] = session
 app.jinja_env.globals['year'] = year=datetime.now().year
 
 # Create SSO instance
@@ -19,7 +20,7 @@ sso = SSO(app=app)
 @sso.login_handler
 def login(user_info):
     session['user'] = user_info
-       
+    session['logged_in'] = True
     # return url specified in query string
     return_url = request.args.get('return')
 
@@ -35,6 +36,7 @@ def logout():
         session.pop('user')
     except:
         pass
+    session['logged_in'] = False
     return redirect('/Shibboleth.sso/Logout?return=/')
 
 @app.route('/')
