@@ -5,6 +5,19 @@ class Config(object):
     DEBUG = True
     DEVELOPMENT = True
 
+    # Flask-SSO Configuration
+    SSO_ATTRIBUTE_MAP = {
+        'pid': (True, 'pid'),
+        'givenName': (True, 'givenName'),
+        'surname': (True, 'surname'),
+        'username': (True, 'username'),
+        'photo_id': (False, 'photo_id'),
+        'web_id': (True, 'web_id')
+        }
+
+    SSO_LOGIN_URL = '/login'		
+    SSO_LOGIN_ENDPOINT = '/login/sso'
+
 class ProductionConfig(Config):
     DEVELOPMENT = False
     DEBUG = False
