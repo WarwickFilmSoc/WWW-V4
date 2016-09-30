@@ -1,4 +1,6 @@
 from flask import Flask
+import socket
+import config
 
 app = Flask(__name__, template_folder = '', instance_path='/usr/share/www-v4', instance_relative_config=True )
 if('v4_web' in socket.gethostname()):
